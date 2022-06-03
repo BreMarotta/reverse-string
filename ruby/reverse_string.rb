@@ -1,5 +1,11 @@
 def reverse_string(str)
-  # type your code in here
+  new_str = ''
+  i = 0
+  while i < str.length
+    new_str = str[i] + new_str
+    i += 1
+  end
+  new_str
 end
 
 if __FILE__ == $PROGRAM_NAME
@@ -11,8 +17,22 @@ if __FILE__ == $PROGRAM_NAME
   puts "Expecting: 'ybabtac'"
   puts "=>", reverse_string('catbaby')
 
+  puts 
+
+  puts "Expecting: 'ocnarf'"
+  puts "=>", reverse_string('franco')
+
+  puts "Expecting: 'nairb-oekin'"
+  puts "=>", reverse_string('nikeo-brian')
+
+  puts "Expecting: ''"
+  puts "=>", reverse_string('')
+
   # Don't forget to add your own!
 end
 
-# Please add your pseudocode to this file
+# Pseudocode:
+  # assign a new variable new_str = ''
+  # iterate through provided str and add each letter to new_str in reverse order
+  # puts new_str
 # And a written explanation of your solution
